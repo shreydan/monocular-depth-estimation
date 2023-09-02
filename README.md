@@ -1,11 +1,17 @@
 # Monocular Depth Estimation
 
-- encoder model: resnext50 (Imagenet pretrained)
-- decoder model: UNet++ ([PyTorch Segmentation Models](https://github.com/qubvel/segmentation_models.pytorch))
+- Kaggle notebook:  [shreydan/monocular-depth-estimation-nyuv2](https://www.kaggle.com/code/shreydan/monocular-depth-estimation-nyuv2)
+- Model details:
+  - encoder model: resnext50 (Imagenet pretrained)
+  - decoder model: UNet++ ([PyTorch Segmentation Models](https://github.com/qubvel/segmentation_models.pytorch))
 - dataset: [NYUv2 depth](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 - metrics: 
   - Structural Similarity Index Measure: SSIM is used for measuring the similarity between two images.
   - Mean Squared Error
+- training parameters:
+  - AdamW optim
+  - lr: 1e-3 scheduled with OneCycleLR
+  - mixed-precision training with fp16
   
 ## Metrics
 
